@@ -1,0 +1,12 @@
+version: '2'
+services:
+  image-service:
+    image: image-service:0.0.1
+    network_mode: "bridge"
+    ports:
+      - "8030:8030"
+    volumes:
+      - "./images:/images"
+    environment:
+      - "APP_PORT=8030"
+      - "IMAGE_PATH=/images"
